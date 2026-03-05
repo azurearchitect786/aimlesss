@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AZ-305 Course</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#why">Why AZ-305?</a></li>
+      <li><a href="#course-details">Course Details</a></li>
+      <li><a href="index.html#trainer">Trainers</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#sessions">Sessions</a></li>
+      <li><a href="#contact-form">Contact Sales</a></li>
+    </ul>
+  </nav>
+
+<div class="image-slider">
+  <div class="slide active">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="Microsoft">
+  </div>
+  <div class="slide">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg" alt="AWS">
+  </div>
+  <div class="slide">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg" alt="Google">
+  </div>
+</div>
+
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg" alt="AZ-104 Badge" class="badge">
+      <div>
+        <h1>Microsoft Azure Architect Expert (AZ-305)</h1>
+        <p>Advance your cloud career with the AZ-305 certification.</p>
+        <a href="#contact-form" class="cta-btn">Register Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Why Take AZ-305 -->
+<section id="why">
+  <h2>Why Take AZ-305?</h2>
+  <p>The AZ-305 certification validates your ability to design secure, scalable, and reliable Azure solutions. It helps you:</p>
+  <ul>
+    <li>🛡️ Design identity, governance, and monitoring solutions</li>
+    <li>💾 Architect data storage strategies</li>
+    <li>🔄 Plan business continuity and disaster recovery</li>
+    <li>⚙️ Build infrastructure solutions that meet business needs</li>
+    <li>📊 Translate requirements into technical cloud designs</li>
+  </ul>
+</section>
+
+
+  <!-- Course Details -->
+  <section id="course-details">
+    <h2>Course Overview</h2>
+    <ul>
+        <li>Designing identity, governance, and monitoring solutions</li>
+        <li>Designing data storage solutions</li>
+        <li>Designing business continuity and disaster recovery</li>
+        <li>Designing infrastructure solutions</li>
+    </ul>
+    <p>Duration: 6 weeks | Mode: Online | Level: Expert</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Students Say</h2>
+    <blockquote>
+      "AZ-305 gave me the practical skills to manage Azure environments confidently."
+      <footer>- Neha, Systems Administrator</footer>
+    </blockquote>
+    <blockquote>
+      "The hands-on labs were invaluable. I passed the exam on my first attempt!"
+      <footer>- Raj, Cloud Specialist</footer>
+    </blockquote>
+  </section>
+
+  <!-- Upcoming Sessions -->
+  <section id="sessions">
+    <h2>Upcoming Sessions</h2>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Mode</th>
+        <th>Seats</th>
+      </tr>
+      <tr>
+        <td>March 25, 2026</td>
+        <td>Online</td>
+        <td>Available</td>
+      </tr>
+      <tr>
+        <td>April 20, 2026</td>
+        <td>Online</td>
+        <td>Available</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact-form">
+    <h2>Register Your Interest</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 CCubed Learning (OPC) Pvt. Ltd. | All Rights Reserved | Contact: training_services@aimlesss.com</p>
+  </footer>
+<script>
+  document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.startsWith('#')) {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script>
+
+
+<script>
+  let slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function showNextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 3000); // change every 3 seconds
+</script>
+
+</body>
+</html>

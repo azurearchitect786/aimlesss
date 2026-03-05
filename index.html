@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AimLesss | Training, Consulting </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      
+      <li><a href="#about">About</a></li>
+<li><a href="index.html#trainer">Trainers</a></li>
+      <li><a href="#contact">Contact Sales</a></li>
+    </ul>
+  </nav>
+
+
+<div class="image-slider">
+  <div class="slide active">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="Microsoft">
+  </div>
+  <div class="slide">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg" alt="AWS">
+  </div>
+  <div class="slide">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg" alt="Google">
+  </div>
+
+</div>
+
+
+
+
+
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <h1>Microsoft Azure Certification Training</h1>
+    <p>Choose your path to cloud success with AZ‑900 and AZ‑104.</p>
+  </header>
+
+  <!-- Courses Section -->
+  <section id="courses">
+    <h2>Available Courses</h2>
+    <div class="course-list">
+      <div class="course-card">
+        <h3>AZ‑900: Microsoft Azure Fundamentals</h3>
+        <p>Beginner-friendly introduction to cloud concepts and Azure services.</p>
+        <a href="AZ900.html" class="cta-btn">View Details</a>
+      </div>
+
+      <div class="course-card">
+        
+        <h3>AZ‑104: Microsoft Azure Administrator</h3>
+        <p>Intermediate-level certification for managing Azure resources and services.</p>
+        <a href="AZ104.html" class="cta-btn">View Details</a>
+      </div>
+
+<div class="course-card">
+        
+        <h3>AZ‑305: Microsoft Azure Architect</h3>
+        <p>Expert-level certification for architecting Azure solutions.</p>
+        <a href="AZ305.html" class="cta-btn">View Details</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We provide high-quality Azure certification training designed to help professionals and students succeed in cloud computing. Our courses combine theory with hands-on labs to prepare you for real-world scenarios and certification exams.</p>
+  </section>
+
+<!-- Trainer Section -->
+<section id="trainer">
+  <h2>Meet Our Microsoft Certified Trainer</h2>
+  <div class="trainer-card">
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQEcX6FzGvrc5Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709934214037?e=1774483200&v=beta&t=-Cy22f7IaMi2ADuStChYgvV7Z5w9in_Z5UA3uJYwN48" alt="Priyant Gupta" class="trainer-photo">
+    <div>
+      <h3>Priyant Gupta</h3>
+      <p>Microsoft Certified Trainer (MCT) | Azure Cloud Architect</p>
+      <p>Priyant brings extensive expertise in cloud technologies and a passion for teaching. His training style combines practical insights with real-world applications, helping learners succeed in certifications like AZ‑900 and AZ‑104.</p>
+      <a href="https://www.linkedin.com/in/priyantgupta/" target="_blank" class="cta-btn">View LinkedIn Profile</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="home-content">
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: training_services@aimlesss.com</p>
+    <p>Phone: +91-6302-638-646</p>
+  </section>
+
+  <div id="contact-form">
+    <h2>Get in Touch</h2>
+    <form action="#" method="post" class="form-container">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 CCubed Learning (OPC) Pvt. Ltd. | All Rights Reserved | Contact: training_services@aimlesss.com</p>
+  </footer>
+<script>
+  document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.startsWith('#')) {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+  let slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function showNextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 3000); // change every 3 seconds
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AZ-900 Course</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#why">Why AZ-900?</a></li>
+      <li><a href="#course-details">Course Details</a></li>
+      <li><a href="index.html#trainer">Trainers</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#sessions">Sessions</a></li>
+      <li><a href="#contact-form">Contact Sales</a></li>
+    </ul>
+  </nav>
+
+
+
+<div class="image-slider">
+  <div class="slide active">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="Microsoft">
+  </div>
+  <div class="slide">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg" alt="AWS">
+  </div>
+  <div class="slide">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg" alt="Google">
+  </div>
+</div>
+
+
+
+  <!-- Hero Section -->
+<header class="hero" id="hero">
+  <div class="hero-content">
+    <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="AZ-900 Badge" class="badge">
+    <div>
+      <h1>Microsoft Azure Fundamentals (AZ-900)</h1>
+      <p>Kickstart your cloud journey with the AZ-900 certification.</p>
+      <a href="#contact-form" class="cta-btn">Register Now</a>
+    </div>
+  </div>
+</header>
+  <!-- Why Take AZ-900 -->
+  <section id="why">
+    <h2>Why Take AZ-900?</h2>
+    <p>The AZ-900 certification is perfect for beginners who want to understand cloud concepts and Microsoft Azure services. It helps you:</p>
+    <ul>
+      <li>🌐 Build a strong foundation in cloud computing</li>
+      <li>☁️ Explore Azure’s core services</li>
+      <li>🔒 Understand security and compliance basics</li>
+      <li>💼 Boost your career opportunities</li>
+    </ul>
+  </section>
+
+  <!-- Course Details -->
+  <section id="course-details">
+    <h2>Course Overview</h2>
+    <ul>
+      <li>Introduction to Cloud Concepts</li>
+      <li>Core Azure Services</li>
+      <li>Security, Privacy, Compliance, and Trust</li>
+      <li>Azure Pricing and Support</li>
+    </ul>
+    <p>Duration: 4 weeks | Mode: Online | Level: Beginner</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Students Say</h2>
+    <blockquote>
+      "The AZ-900 course gave me the confidence to start my cloud career. Highly recommended!"
+      <footer>- Priya, Cloud Engineer</footer>
+    </blockquote>
+    <blockquote>
+      "Clear explanations and practical examples made learning Azure easy."
+      <footer>- Arjun, IT Professional</footer>
+    </blockquote>
+  </section>
+
+  <!-- Upcoming Sessions -->
+  <section id="sessions">
+    <h2>Upcoming Sessions</h2>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Mode</th>
+        <th>Seats</th>
+      </tr>
+      <tr>
+        <td>March 15, 2026</td>
+        <td>Online</td>
+        <td>Available</td>
+      </tr>
+      <tr>
+        <td>April 10, 2026</td>
+        <td>Online</td>
+        <td>Available</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact-form">
+    <h2>Register Your Interest</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 CCubed Learning (OPC) Pvt. Ltd. | All Rights Reserved | Contact: training_services@aimlesss.com</p>
+  </footer>
+<script>
+  document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.startsWith('#')) {
+        e.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+  let slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function showNextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 3000); // change every 3 seconds
+</script>
+
+</body>
+</html>
